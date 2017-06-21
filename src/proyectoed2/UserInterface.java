@@ -32,6 +32,14 @@ public class UserInterface extends javax.swing.JDialog {
 
         createRegistro = new javax.swing.JDialog();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tf_id = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jCalendar1 = new com.toedter.calendar.JCalendar();
+        jLabel6 = new javax.swing.JLabel();
+        tf_salario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jb_agregar = new javax.swing.JButton();
         jb_listar = new javax.swing.JButton();
@@ -39,23 +47,70 @@ public class UserInterface extends javax.swing.JDialog {
         jb_search = new javax.swing.JButton();
         jb_delete = new javax.swing.JButton();
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Creacion de Registro ");
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("ID: ");
+
+        tf_nombre.setToolTipText("");
+
+        jLabel4.setText("Nombre: ");
+
+        jLabel5.setText("Birthdate: ");
+
+        jCalendar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Salary:");
 
         javax.swing.GroupLayout createRegistroLayout = new javax.swing.GroupLayout(createRegistro.getContentPane());
         createRegistro.getContentPane().setLayout(createRegistroLayout);
         createRegistroLayout.setHorizontalGroup(
             createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(createRegistroLayout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addComponent(jLabel2)
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(createRegistroLayout.createSequentialGroup()
+                        .addGap(221, 221, 221)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(createRegistroLayout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre)
+                            .addComponent(tf_id)
+                            .addComponent(jCalendar1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                            .addComponent(tf_salario))))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         createRegistroLayout.setVerticalGroup(
             createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(createRegistroLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel2)
-                .addContainerGap(464, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(59, 59, 59)
+                .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(53, 53, 53)
+                .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(createRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(tf_salario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -162,13 +217,21 @@ public class UserInterface extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog createRegistro;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton jb_agregar;
     private javax.swing.JButton jb_delete;
     private javax.swing.JButton jb_listar;
     private javax.swing.JButton jb_modificar;
     private javax.swing.JButton jb_search;
+    private javax.swing.JTextField tf_id;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_salario;
     // End of variables declaration//GEN-END:variables
 
     public void openDialog(JDialog Dialog) {
