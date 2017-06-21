@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.Serializable;
 
 public class Registro implements Serializable{
- 
+
 private String name;
 private String birthdate;
 private int id;
