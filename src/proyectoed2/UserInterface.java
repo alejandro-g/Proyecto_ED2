@@ -471,22 +471,4 @@ public class UserInterface extends javax.swing.JFrame {
         Dialog.pack();
         Dialog.setVisible(true);
     }
-
-    public void listar() throws IOException {
-        //metodos.listarRegistro();
-        //registros = metodos.getLista();
-        DefaultTableModel model = (DefaultTableModel) table_registros.getModel();
-        int size = model.getRowCount();
-        if (size > 0) {
-            for (int i = size - 1; i >= 0; i--) {
-                model.removeRow(i);
-            }
-        }
-
-        for (Registro temporal : registros) {
-            Object[] row = {temporal.getName(), temporal.getBirthdate(), temporal.getId(), temporal.getSalary()};
-            model.addRow(row);
-        }
-        table_registros.setModel(model);
-    }
 }
