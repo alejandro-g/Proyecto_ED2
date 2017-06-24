@@ -1,22 +1,45 @@
-
 package proyectoed2;
 
 import java.io.File;
 import java.io.Serializable;
 
-public class Registro implements Serializable{
+public class Registro implements Serializable {
 
-private String name;
-private String birthdate;
-private int id;
-private double salary;
+    private String name;
+    private String birthdate;
+    private int id;
+    private float salary;
+    private char asterisco;
+    private int referencia;
 
-public Registro(String name, String birthdate, int id, double salary){
-    this.name = name;
-    this.birthdate = birthdate;
-    this.id = id;
-    this.salary = salary; 
-}
+    public Registro(String name, String birthdate, int id, float salary) {
+        this.name = name;
+        this.birthdate = birthdate;
+        this.id = id;
+        this.salary = salary;
+        this.asterisco = '~';
+        this.referencia = 0;
+    }
+
+    public Registro() {
+
+    }
+
+    public char getAsterisco() {
+        return asterisco;
+    }
+
+    public void setAsterisco(char asterisco) {
+        this.asterisco = asterisco;
+    }
+
+    public int getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(int referencia) {
+        this.referencia = referencia;
+    }
 
     public String getName() {
         return name;
@@ -46,8 +69,13 @@ public Registro(String name, String birthdate, int id, double salary){
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(float salary) {
         this.salary = salary;
+    }
+    
+    public int sizeOfRecord(){
+        int size = 68;//tamaño que tendra cada registro
+        return size;
     }
 
     @Override
